@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om kunstneren | Lokal kunstner på Sydfyn – Astrids Kunst Atelier</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="icon" href="img/aka-logo.png">
+  <meta name="description" content="Unikke oliemalerier fra Svendborg. Lokal kunst fra Sydfyn inspireret af naturen. Køb original kunst eller bestil dit eget maleri.">
+<meta name="keywords" content="kunst svendborg, lokal kunst svendborg, sydfynsk kunst, naturkunst sydfyn, maler svendborg, kunstner fyn">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Astrid Kunst Atelier",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Svendborg",
+    "addressRegion": "Fyn",
+    "addressCountry": "DK"
+  },
+  "email": "astrid@kunst.dk",
+  "telephone": "+4512345678"
+}
+</script>
+
+
+</head>
+
+<body>
+ 
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">A<span>·</span>K<span>·</span>A<span><span> - </span>Astrids Kunst Atalier</span></a>
+  <ul class="nav-links">
+    <li><a href="#om">Om</a></li>
+    <li><a href="index.html#galleri">Galleri</a></li>
+    <li><a href="index.html#priser">Priser</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section>
+  <div id="om">
+    <div class="om-image-wrap reveal">
+      <div class="om-image-placeholder">
+        <img src="img/astrid-maler.JPG" width="500" height="800">
+      </div>
+    </div>
+    <div class="om-text reveal">
+      <p class="section-label">Om kunstneren</p>
+      <h2 class="section-title">Hej, jeg hedder <em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--moss)">Astrid</em></h2>
+      <div class="divider"></div>
+      <p>Jeg er maler og bor i <strong>Svendborg på Fyn</strong>, omgivet af det syddanske øhav og den frodige natur, som altid har været min største inspiration.</p>
+      <p>Mine malerier er primært <strong>naturlandskaber</strong> - skove, kyststrækninger, marker og det bløde lys, som skifter med årstiderne. Jeg arbejder i olie på lærred og forsøger at fange stemningen i et sted frem for en nøjagtig gengivelse.</p>
+      <p>Hvert maleri er unikt og malet i mit lille studie tæt på vandet.</p>
+      <p style="margin-top:1.8rem;font-size:0.82rem;color:var(--earth);letter-spacing:0.1em;">— Astrid, Svendborg</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Astrids Kunst Atalier  — Kunst &amp; Malerier</span>
+  <span>Svendborg · Fyn · Danmark</span>
+</footer>
+ 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <div id="lightbox-content" style="width:60vw;max-width:700px;aspect-ratio:4/3;border-radius:2px;">
+  </div>
+</div>
+
+
+<script>
+//billeder
+const images = [
+  "img/1-astrid-maleri.JPG",
+  "img/2-astrid-maleri.JPG",
+  "img/3-astrid-maleri.JPG",
+  "img/4-astrid-maleri.JPG",
+  "img/5-astrid-maleri.JPG",
+  "img/6-astrid-maleri.JPG"
+];
+
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+ 
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+ 
+  // Lightbox
+  function openLightbox(idx) {
+  const lb = document.getElementById('lightbox');
+  const cnt = document.getElementById('lightbox-content');
+
+  cnt.innerHTML = `<img src="${images[idx]}" style="width:100%;height:100%;object-fit:contain;">`;
+
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+</script>
+</body>
+</html>
