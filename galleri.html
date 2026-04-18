@@ -237,6 +237,31 @@
       overflow: hidden;
       position: relative;
     }
+
+/* SOLGT overlay */
+.sold-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 18, 16, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* sørg for at card kan holde overlay */
+.painting-card {
+  position: relative;
+}
+
+
+
     .painting-card .img-wrap::before { content: ''; display: block; }
     .painting-card img {
       position: absolute;
@@ -775,6 +800,14 @@
         </div>
         <div class="info"><div class="info-title">Maleri 4</div><div class="info-meta">40 × 40 cm &nbsp;·&nbsp; Ansigter</div></div>
       </div>
+      <div class="painting-card item-portrait sold" onclick="openLb('ansigter',4)">
+        <div class="img-wrap" style="padding-top:125%">
+          <img src="img/Maleri5-Solgt-Ansigter.jpg" alt="Ansigter – 50x40 cm">
+          <div class="hover-overlay"><span>Se maleri</span></div>
+          <div class="sold-overlay">Solgt</div>
+        </div>
+        <div class="info"><div class="info-title">Maleri 5</div><div class="info-meta">50 × 40 cm &nbsp;·&nbsp; Ansigter</div></div>
+      </div>
     </div>
   </div>
  
@@ -930,13 +963,15 @@
       { img:'img/Maleri1-40x30-Ansigter.JPEG', title:'Maleri 1', size:'40 × 30 cm', series:'Ansigter', price:'1.200 kr.' },
       { img:'img/Maleri2-50x40-Ansigter.JPEG', title:'Maleri 2', size:'50 × 40 cm', series:'Ansigter', price:'1.800 kr.' },
       { img:'img/Maleri3-40x30-Ansigter.JPEG', title:'Maleri 3', size:'40 × 30 cm', series:'Ansigter', price:'1.200 kr.' },
-      { img:'img/Maleri4-40x40-Ansigter.JPEG', title:'Maleri 4', size:'40 × 40 cm', series:'Ansigter', price:'1.200 kr.' },
+      { img:'img/Maleri4-40x40-Ansigter.JPEG', title:'Maleri 4', size:'38 × 47 cm', series:'Provence', price:'1.200 kr.' },
+      { img:'img/Maleri5-Solgt-Ansigter.jpg', title:'Maleri 5', size:'', series:'Provence', price:'Solgt' },
     ],
     provence: [
       { img:'img/Maleri1-30x40-Provence.JPEG', title:'Maleri 1', size:'30 × 40 cm', series:'Provence', price:'1.200 kr.' },
       { img:'img/Maleri2-40x40-Provence.JPEG', title:'Maleri 2', size:'40 × 40 cm', series:'Provence', price:'1.200 kr.' },
       { img:'img/Maleri3-40x40-Provence.JPEG', title:'Maleri 3', size:'40 × 40 cm', series:'Provence', price:'1.200 kr.' },
       { img:'img/Maleri4-38x47-Provence.JPEG', title:'Maleri 4', size:'38 × 47 cm', series:'Provence', price:'1.200 kr.' },
+      
     ],
   };
  
