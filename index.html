@@ -7,51 +7,51 @@
   <title>Lokal kunst Svendborg & Sydfyn | Unikke akrylmalerier – Astrids Kunst Atelier</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
-    <link rel="icon" href="img/aka-logo.png">
+  <link rel="icon" href="img/aka-logo.png">
   <meta name="description" content="Oplev lokal kunst i Svendborg og på Sydfyn. Unikke akrylmalerier inspireret af naturen – køb original kunst eller bestil dit eget maleri.">
-<meta name="keywords" content="kunst svendborg, lokal kunst svendborg, sydfynsk kunst, naturkunst sydfyn, maler svendborg, kunstner fyn">
+  <meta name="keywords" content="kunst svendborg, lokal kunst svendborg, sydfynsk kunst, naturkunst sydfyn, maler svendborg, kunstner fyn">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Astrid Kunst Atelier",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Svendborg",
-    "addressRegion": "Fyn",
-    "addressCountry": "DK"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Astrid Kunst Atelier",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Svendborg",
+      "addressRegion": "Fyn",
+      "addressCountry": "DK"
+    },
     "areaServed": "Svendborg, Sydfyn",
-"description": "Lokal kunst i Svendborg og Sydfyn"
-  },
-  "email": "astrid@kunst.dk",
-  "telephone": "+4512345678"
-}
-</script>
-
-
+    "description": "Lokal kunst i Svendborg og Sydfyn",
+    "email": "astrid_kv@hotmail.com",
+    "telephone": "+4529921693"
+  }
+  </script>
 </head>
 <body>
  
 <!-- NAV -->
 <nav id="nav">
   <a href="#hjem" class="nav-logo">A<span>·</span>K<span>·</span>A<span class="nav-logo-aka"><span> - </span>Astrids Kunst Atelier</span></a>
-  <ul class="nav-links">
-    <li><a href="om-kunstneren.html">Om</a></li>
-    <li><a href="galleri.html">Galleri</a></li>
-    <li><a href="#priser">Priser</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="om-kunstneren.html" onclick="closeMenu()">Om</a></li>
+    <li><a href="galleri.html" onclick="closeMenu()">Galleri</a></li>
+    <li><a href="#priser" onclick="closeMenu()">Priser</a></li>
+    <li><a href="#kontakt" onclick="closeMenu()">Kontakt</a></li>
   </ul>
 </nav>
  
 <!-- HERO -->
 <section id="hjem">
-
   <div>
     <p class="hero-eyebrow">Maler · Svendborg, Fyn</p>
     <h1 class="hero-title">
       Lokal kunst i Svendborg<br>
-      — <em> — originale malerier<br>fra Sydfyn</em>
+      <em>— originale malerier<br>fra Sydfyn</em>
     </h1>
     <p class="hero-sub">Originale akrylmalerier af det danske og europæiske landskab. Hvert billede er malet i rolig fordybelse og bærer et stykke af det sted, det viser.</p>
     <a href="galleri.html" class="hero-cta">Se malerierne</a>
@@ -62,11 +62,7 @@
   </div>
 
   <div class="hero-scroll">Scroll</div>
-
 </section>
- 
-<!-- OM ASTRID -->
-
  
 <!-- GALLERI -->
 <section id="galleri">
@@ -123,8 +119,8 @@
   <p style="font-size:1rem;line-height:1.7;opacity:0.8;max-width:480px;margin:0 auto 2rem;">
     Alle malerier er originale akrylmalerier og kan hentes i Svendborg eller sendes. Ønsker du et motiv med særlig betydning, tager jeg gerne imod bestillinger.
   </p>
-  <a href="#kontakt" style="display:inline-block;padding:13px 36px;background:var(--cream);color:var(--moss);font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;margin:0 8px;">Kontakt Astrid</a>
-  <a href="#priser" style="display:inline-block;padding:13px 36px;border:1.5px solid rgba(245,240,232,0.6);color:var(--cream);font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;margin:0 8px;">Se priser</a>
+  <a href="#kontakt" style="display:inline-block;padding:13px 36px;background:var(--cream);color:var(--moss);font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;margin:0 8px 8px;">Kontakt Astrid</a>
+  <a href="#priser" style="display:inline-block;padding:13px 36px;border:1.5px solid rgba(245,240,232,0.6);color:var(--cream);font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;margin:0 8px 8px;">Se priser</a>
 </div>
 
  
@@ -187,7 +183,7 @@
     </div>
     <div class="kontakt-item">
       <span class="kontakt-item-label">Telefon</span>
-      <span class="kontakt-item-value"><a href="tel:+4512345678">+45 29 92 16 93</a></span>
+      <span class="kontakt-item-value"><a href="tel:+4529921693">+45 29 92 16 93</a></span>
     </div>
     <div class="kontakt-item">
       <span class="kontakt-item-label">By</span>
@@ -198,29 +194,43 @@
  
 <!-- FOOTER -->
 <footer>
-  <span>© 2026 Astrids Kunst Atalier  — Kunst &amp; Malerier</span>
+  <span>© 2026 Astrids Kunst Atelier — Kunst &amp; Malerier</span>
   <span>Svendborg · Fyn · Danmark</span>
 </footer>
  
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <span class="lightbox-close" onclick="closeLightbox()">×</span>
-  <div id="lightbox-content" style="width:60vw;max-width:700px;aspect-ratio:4/3;border-radius:2px;">
-  </div>
+  <div id="lightbox-content" style="width:60vw;max-width:700px;aspect-ratio:4/3;border-radius:2px;"></div>
 </div>
 
-
 <script>
-//billeder
-const images = [
-  "img/Maleri2-40x40-Færøerne.JPEG",
-  "img/Maleri4-80x60-Alperne.JPEG",
-  "img/Maleri5-50x50-Sofielund.JPEG",
-  "img/Maleri3-40x40-Ansigter.JPEG",
-  "img/Maleri4-40x40-Færøerne.JPEG",
-  "img/Maleri1-60x80-Lys.JPEG"
-];
+  const images = [
+    "img/Maleri2-40x40-Færøerne.JPEG",
+    "img/Maleri4-80x60-Alperne.JPEG",
+    "img/Maleri5-50x50-Sofielund.JPEG",
+    "img/Maleri3-40x40-Ansigter.JPEG",
+    "img/Maleri4-40x40-Færøerne.JPEG",
+    "img/Maleri1-60x80-Lys.JPEG"
+  ];
 
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
 
   // Nav scroll effect
   const nav = document.getElementById('nav');
@@ -231,7 +241,7 @@ const images = [
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         setTimeout(() => entry.target.classList.add('visible'), 80);
         observer.unobserve(entry.target);
@@ -242,19 +252,17 @@ const images = [
  
   // Lightbox
   function openLightbox(idx) {
-  const lb = document.getElementById('lightbox');
-  const cnt = document.getElementById('lightbox-content');
-
-  cnt.innerHTML = `<img src="${images[idx]}" style="width:100%;height:100%;object-fit:contain;">`;
-
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
+    const lb  = document.getElementById('lightbox');
+    const cnt = document.getElementById('lightbox-content');
+    cnt.innerHTML = `<img src="${images[idx]}" style="width:100%;height:100%;object-fit:contain;">`;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
   function closeLightbox() {
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   }
-  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 </body>
 </html>

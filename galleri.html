@@ -18,7 +18,7 @@
       --bark:       #8b6f47;
       --earth:      #c4a882;
       --dark:       #2c2a26;
-      --muted:      #9a9186;
+      --muted:      #5a5750;
       --line:       #ddd5c4;
     }
  
@@ -43,7 +43,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.4rem 3rem;
-      background: rgba(250, 248, 243, 0.92);
+      background: rgba(250, 248, 243, 0.97);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--line);
       transition: border-color 0.3s;
@@ -55,8 +55,36 @@
       letter-spacing: 0.06em;
       color: var(--dark);
       text-decoration: none;
+      z-index: 101;
     }
     .nav-logo span { font-style: italic; color: var(--moss); }
+
+    /* ── HAMBURGER ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 2px;
+      z-index: 101;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: var(--dark);
+      transition: transform 0.35s ease, opacity 0.25s ease;
+      transform-origin: center;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
     .nav-links {
       display: flex;
       gap: 2.4rem;
@@ -82,7 +110,6 @@
       justify-content: space-between;
       gap: 2rem;
     }
-
     .page-eyebrow {
       font-size: 0.72rem;
       letter-spacing: 0.2em;
@@ -107,10 +134,7 @@
       line-height: 1.05;
       color: var(--dark);
     }
-    .page-title em {
-      font-style: italic;
-      color: var(--moss);
-    }
+    .page-title em { font-style: italic; color: var(--moss); }
     .page-count {
       font-size: 0.78rem;
       letter-spacing: 0.1em;
@@ -158,23 +182,16 @@
       transition: all 0.2s;
     }
     .filter-btn:hover { border-color: var(--moss); color: var(--moss); }
-    .filter-btn.active {
-      background: var(--moss);
-      border-color: var(--moss);
-      color: var(--cream);
-    }
+    .filter-btn.active { background: var(--moss); border-color: var(--moss); color: var(--cream); }
  
-    /* ── MASONRY GRID ── */
+    /* ── GALLERY ── */
     .gallery-wrap {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 3rem 6rem;
     }
  
-    /* Series sections */
-    .series-section {
-      margin-bottom: 5rem;
-    }
+    .series-section { margin-bottom: 5rem; }
     .series-section.hidden { display: none; }
  
     .series-header {
@@ -199,15 +216,12 @@
       color: var(--muted);
     }
  
-    /* Masonry grid per series */
     .masonry {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 12px;
       align-items: start;
     }
- 
-    /* Wider for landscape, taller for portrait */
     .masonry .item-landscape { grid-column: span 2; }
     .masonry .item-square    { grid-column: span 1; }
     .masonry .item-portrait  { grid-column: span 1; }
@@ -219,16 +233,11 @@
       position: relative;
       background: var(--cream);
     }
- 
     .painting-card .img-wrap {
       overflow: hidden;
       position: relative;
     }
- 
-    .painting-card .img-wrap::before {
-      content: '';
-      display: block;
-    }
+    .painting-card .img-wrap::before { content: ''; display: block; }
     .painting-card img {
       position: absolute;
       inset: 0;
@@ -238,14 +247,8 @@
       transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
       filter: saturate(0.88);
     }
-    .painting-card:hover img {
-      transform: scale(1.05);
-      filter: saturate(1);
-    }
- 
-    .painting-card .info {
-      padding: 0.7rem 0.9rem 0.9rem;
-    }
+    .painting-card:hover img { transform: scale(1.05); filter: saturate(1); }
+    .painting-card .info { padding: 0.7rem 0.9rem 0.9rem; }
     .painting-card .info-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1rem;
@@ -259,8 +262,6 @@
       color: var(--muted);
       margin-top: 0.15rem;
     }
- 
-    /* Hover overlay */
     .painting-card .hover-overlay {
       position: absolute;
       inset: 0;
@@ -293,7 +294,6 @@
       padding: 2rem;
     }
     .lightbox.open { display: flex; }
- 
     .lightbox-inner {
       position: relative;
       display: flex;
@@ -334,13 +334,7 @@
       line-height: 1.15;
       margin-bottom: 0.8rem;
     }
-    .lb-size {
-      font-size: 0.8rem;
-      color: rgba(196,168,130,0.6);
-      margin-bottom: 1rem;
-    }
-
-    /* ── PRICE DISPLAY ── */
+    .lb-size { font-size: 0.8rem; color: rgba(196,168,130,0.6); margin-bottom: 1rem; }
     .lb-price-wrap {
       margin-bottom: 1.8rem;
       padding-bottom: 1.5rem;
@@ -360,12 +354,6 @@
       color: var(--cream);
       line-height: 1;
     }
-    .lb-price-note {
-      font-size: 0.68rem;
-      color: rgba(196,168,130,0.5);
-      margin-top: 0.35rem;
-    }
-
     .lb-cta {
       display: inline-block;
       padding: 10px 24px;
@@ -378,23 +366,18 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .lb-cta:hover { background: var(--moss); border-color: var(--moss); }
- 
     .lightbox-close {
       position: absolute;
       top: -2.5rem; right: 0;
       font-size: 1.6rem;
       color: var(--cream);
       cursor: pointer;
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      opacity: 0.55;
-      transition: opacity 0.2s;
-      line-height: 1;
       background: none;
       border: none;
+      opacity: 0.55;
+      transition: opacity 0.2s;
     }
     .lightbox-close:hover { opacity: 1; }
- 
     .lb-nav {
       position: absolute;
       top: 50%;
@@ -412,7 +395,7 @@
     .lb-prev { left: -3.5rem; }
     .lb-next { right: -3.5rem; }
  
-    /* ── CTA FOOTER STRIP ── */
+    /* ── CTA STRIP ── */
     .cta-strip {
       background: var(--moss);
       color: var(--cream);
@@ -426,13 +409,7 @@
       margin-bottom: 1rem;
       line-height: 1.2;
     }
-    .cta-strip p {
-      opacity: 0.8;
-      font-size: 0.95rem;
-      max-width: 440px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
-    }
+    .cta-strip p { opacity: 0.8; font-size: 0.95rem; max-width: 440px; margin: 0 auto 2rem; line-height: 1.7; }
     .cta-strip a {
       display: inline-block;
       padding: 12px 32px;
@@ -459,28 +436,58 @@
       letter-spacing: 0.1em;
     }
  
-    /* ── RESPONSIVE ── */
+    /* ══════════════════════════════════════
+       RESPONSIVE – 900px
+    ══════════════════════════════════════ */
     @media (max-width: 900px) {
-      nav { padding: 1.2rem 1.5rem; }
-      .page-header { padding: 120px 1.5rem 40px; flex-direction: column; align-items: flex-start; }
+      nav { padding: 1.1rem 1.5rem; }
+
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(250, 248, 243, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
+        pointer-events: none;
+      }
+      .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+      .nav-links a { font-size: 1.1rem; letter-spacing: 0.2em; color: var(--dark); }
+      .nav-logo-aka { display: none; }
+
+      .page-header { padding: 110px 1.5rem 40px; flex-direction: column; align-items: flex-start; }
       .filter-bar { padding: 0 1.5rem; }
       .gallery-wrap { padding: 0 1.5rem 4rem; }
       .masonry { grid-template-columns: 1fr 1fr; }
       .masonry .item-landscape { grid-column: span 2; }
-      .lightbox-inner { flex-direction: column; gap: 1.5rem; }
+      .masonry .item-portrait,
+      .masonry .item-square { grid-column: span 1; }
+
+      .lightbox-inner { flex-direction: column; gap: 1.5rem; align-items: center; }
       .lightbox-img-wrap img { max-width: 90vw; max-height: 55vh; }
-      .lightbox-meta { width: 100%; text-align: center; }
-      .lb-prev { left: -1rem; }
-      .lb-next { right: -1rem; }
-      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-      .nav-logo-aka {
-        font-size: 0;
-      }
+      .lightbox-meta { width: 100%; text-align: center; max-width: 90vw; }
+      .lb-prev { left: -0.5rem; }
+      .lb-next { right: -0.5rem; }
+
+      .cta-strip { padding: 4rem 1.5rem; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.4rem 1.5rem; }
     }
- 
-    @media (max-width: 600px) {
+
+    /* ══════════════════════════════════════
+       RESPONSIVE – 480px
+    ══════════════════════════════════════ */
+    @media (max-width: 480px) {
       .masonry { grid-template-columns: 1fr; }
-      .masonry .item-landscape { grid-column: span 1; }
+      .masonry .item-landscape,
+      .masonry .item-portrait,
+      .masonry .item-square { grid-column: span 1; }
+      .filter-btn { padding: 5px 12px; font-size: 0.68rem; }
+      .page-title { font-size: 2.2rem; }
     }
   </style>
 </head>
@@ -489,18 +496,21 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">A<span>·</span>K<span>·</span>A<span class="nav-logo-aka"><span> - </span>Astrids Kunst Atelier</span></a>
-  <ul class="nav-links">
-    <li><a href="om-kunstneren.html">Om</a></li>
-    <li><a href="galleri.html" class="active">Galleri</a></li>
-    <li><a href="index.html#priser">Priser</a></li>
-    <li><a href="index.html#kontakt">Kontakt</a></li>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="om-kunstneren.html" onclick="closeMenu()">Om</a></li>
+    <li><a href="galleri.html" class="active" onclick="closeMenu()">Galleri</a></li>
+    <li><a href="index.html#priser" onclick="closeMenu()">Priser</a></li>
+    <li><a href="index.html#kontakt" onclick="closeMenu()">Kontakt</a></li>
   </ul>
 </nav>
  
 <!-- PAGE HEADER -->
 <div class="page-header">
   <div class="page-header-left">
-    <p class="page-eyebrow">Originale oliemalerier</p>
+    <p class="page-eyebrow">Originale akrylmalerier</p>
     <h1 class="page-title">Galleri —<br><em>hele samlingen</em></h1>
   </div>
   <div class="page-count">
@@ -584,7 +594,7 @@
         </div>
         <div class="info"><div class="info-title">Maleri 1</div><div class="info-meta">50 × 40 cm &nbsp;·&nbsp; Sofielund</div></div>
       </div>
-     <div class="painting-card item-portrait" onclick="openLb('sofielund',1)">
+      <div class="painting-card item-portrait" onclick="openLb('sofielund',1)">
         <div class="img-wrap" style="padding-top:125%">
           <img src="img/Maleri2-80x60-Sofielund.JPEG" alt="Sofielund – 80x60 cm">
           <div class="hover-overlay"><span>Se maleri</span></div>
@@ -610,7 +620,7 @@
           <img src="img/Maleri5-50x50-Sofielund.JPEG" alt="Sofielund – 50x50 cm">
           <div class="hover-overlay"><span>Se maleri</span></div>
         </div>
-        <div class="info"><div class="info-title">Maleri 5 </div><div class="info-meta">50 × 50 cm &nbsp;·&nbsp; Sofielund</div></div>
+        <div class="info"><div class="info-title">Maleri 5</div><div class="info-meta">50 × 50 cm &nbsp;·&nbsp; Sofielund</div></div>
       </div>
     </div>
   </div>
@@ -627,14 +637,14 @@
           <img src="img/Maleri1-60x80-Lys.JPEG" alt="Lys – 60x80 cm">
           <div class="hover-overlay"><span>Se maleri</span></div>
         </div>
-        <div class="info"><div class="info-title">Maleri 1 </div><div class="info-meta">60 × 80 cm &nbsp;·&nbsp; Lys</div></div>
+        <div class="info"><div class="info-title">Maleri 1</div><div class="info-meta">60 × 80 cm &nbsp;·&nbsp; Lys</div></div>
       </div>
       <div class="painting-card item-square" onclick="openLb('lys',1)">
         <div class="img-wrap" style="padding-top:100%">
           <img src="img/Maleri2-60x80-Lys.JPEG" alt="Lys – 60x80 cm">
           <div class="hover-overlay"><span>Se maleri</span></div>
         </div>
-        <div class="info"><div class="info-title">Maleri 2 </div><div class="info-meta">60 × 80 cm &nbsp;·&nbsp; Lys</div></div>
+        <div class="info"><div class="info-title">Maleri 2</div><div class="info-meta">60 × 80 cm &nbsp;·&nbsp; Lys</div></div>
       </div>
       <div class="painting-card item-square" onclick="openLb('lys',2)">
         <div class="img-wrap" style="padding-top:100%">
@@ -733,7 +743,7 @@
   <div class="series-section" data-series="ansigter">
     <div class="series-header">
       <span class="series-name">Ansigter</span>
-      <span class="series-count">5 værker</span>
+      <span class="series-count">4 værker</span>
     </div>
     <div class="masonry">
       <div class="painting-card item-portrait" onclick="openLb('ansigter',0)">
@@ -752,7 +762,7 @@
       </div>
       <div class="painting-card item-portrait" onclick="openLb('ansigter',2)">
         <div class="img-wrap" style="padding-top:125%">
-          <img src="img/Maleri3-40x30-Ansigter.JPEG" alt="Ansigter – 40x40 cm">
+          <img src="img/Maleri3-40x30-Ansigter.JPEG" alt="Ansigter – 40x30 cm">
           <div class="hover-overlay"><span>Se maleri</span></div>
         </div>
         <div class="info"><div class="info-title">Maleri 3</div><div class="info-meta">40 × 30 cm &nbsp;·&nbsp; Ansigter</div></div>
@@ -810,13 +820,13 @@
 <!-- CTA STRIP -->
 <div class="cta-strip">
   <h3>Fandt du et maleri<br><em>du ikke kan glemme?</em></h3>
-  <p>Alle malerier er originale oliemalerier. Skriv til mig for at høre om pris, tilgængelighed eller en bestilling.</p>
+  <p>Alle malerier er originale akrylmalerier. Skriv til mig for at høre om pris, tilgængelighed eller en bestilling.</p>
   <a href="index.html#kontakt">Kontakt Astrid</a>
 </div>
  
 <!-- FOOTER -->
 <footer>
-  <span>© 2026 Astrids Kunst Atelier — Kunst & Malerier</span>
+  <span>© 2026 Astrids Kunst Atelier — Kunst &amp; Malerier</span>
   <span>Svendborg · Fyn · Danmark</span>
 </footer>
  
@@ -843,35 +853,46 @@
 </div>
  
 <script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
   // Nav scroll
   const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
-    nav.style.borderBottomColor = window.scrollY > 40 ? 'var(--line)' : 'transparent';
+    nav.style.borderBottomColor = window.scrollY > 40 ? 'var(--line)' : 'var(--line)';
   });
  
-  // ── FILTER ──
+  // Filter
   const filterBtns = document.querySelectorAll('.filter-btn');
   const sections   = document.querySelectorAll('.series-section');
- 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const f = btn.dataset.filter;
       sections.forEach(s => {
-        if (f === 'all' || s.dataset.series === f) {
-          s.classList.remove('hidden');
-        } else {
-          s.classList.add('hidden');
-        }
+        s.classList.toggle('hidden', f !== 'all' && s.dataset.series !== f);
       });
     });
   });
  
-  // ── LIGHTBOX DATA ──
-  // Priser er sat ud fra størrelse – ret dem her efter dine faktiske priser
+  // Lightbox data
   const seriesData = {
-    sydfyn:    [{ img:'img/1-astrid-maleri.JPG', title:'Maleri 1', size:'80 × 80 cm', series:'Sydfyn', price:'2.200 kr.' }],
     faeroerne: [
       { img:'img/Maleri1-60x60-Færøerne.JPEG', title:'Maleri 1', size:'60 × 60 cm', series:'Færøerne', price:'1.800 kr.' },
       { img:'img/Maleri2-40x40-Færøerne.JPEG', title:'Maleri 2', size:'40 × 40 cm', series:'Færøerne', price:'1.200 kr.' },
@@ -928,32 +949,27 @@
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
- 
   function renderLb() {
     const d = seriesData[currentSeries][currentIdx];
-    document.getElementById('lb-img').src             = d.img;
-    document.getElementById('lb-img').alt             = d.title;
-    document.getElementById('lb-title').textContent   = d.title;
-    document.getElementById('lb-size').textContent    = d.size;
-    document.getElementById('lb-series').textContent  = d.series;
-    document.getElementById('lb-price').textContent   = d.price;
+    document.getElementById('lb-img').src            = d.img;
+    document.getElementById('lb-img').alt            = d.title;
+    document.getElementById('lb-title').textContent  = d.title;
+    document.getElementById('lb-size').textContent   = d.size;
+    document.getElementById('lb-series').textContent = d.series;
+    document.getElementById('lb-price').textContent  = d.price;
   }
- 
   function navLb(dir) {
     const arr = seriesData[currentSeries];
     currentIdx = (currentIdx + dir + arr.length) % arr.length;
     renderLb();
   }
- 
   function closeLb() {
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   }
- 
   function handleLbClick(e) {
     if (e.target === document.getElementById('lightbox')) closeLb();
   }
- 
   document.addEventListener('keydown', e => {
     if (!document.getElementById('lightbox').classList.contains('open')) return;
     if (e.key === 'Escape')     closeLb();
