@@ -601,13 +601,23 @@
     footer {
       background: var(--dark);
       border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 1.6rem 3rem;
+      padding: 1.3rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: rgba(196,168,130,0.35);
       font-size: 0.72rem;
       letter-spacing: 0.1em;
+    }
+
+    .sonderbymarketing {
+      background-color: #34302c;
+      text-align: center;
+      color: rgb(150, 150, 150);
+    }
+
+    .sonderbymarketing-span a {
+      color: rgb(158, 158, 158);
     }
  
     /* ── LIGHTBOX ── */
