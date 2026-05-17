@@ -509,51 +509,65 @@
     }
  
     /* ── PRISER ── */
-    #priser {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .price-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      margin-top: 3rem;
-    }
-    .price-item {
-      background: rgb(194, 205, 194);
-      padding: 2rem 2.4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.2s;
-    }
-    .price-item:hover { background: var(--cream); }
-    .price-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 300;
-    }
-    .price-sub {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-top: 0.2rem;
-      letter-spacing: 0.06em;
-    }
-    .price-val {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.7rem;
-      font-weight: 300;
-      color: var(--moss);
-      white-space: nowrap;
-    }
-    .price-note {
-      margin-top: 1.8rem;
-      font-size: 0.82rem;
-      color: var(--muted);
-      font-style: italic;
-    }
+    /* ── PRISER ── */
+#priser {
+  padding: 6rem 3rem;
+  background-color: #c3d2c5;
+  text-align: center;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 3rem;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price-item {
+  background: rgb(194, 205, 194);
+  padding: 2rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.price-item:hover { background: var(--cream); }
+
+.price-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: left;
+}
+
+.price-sub {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+.price-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--moss);
+  white-space: nowrap;
+}
+
+.price-note {
+  margin-top: 1.8rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+}
  
     /* ── KONTAKT ── */
     #kontakt {
@@ -664,6 +678,63 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+
+    /*showcase*/
+   /* ── MALERIER I RUMMET ── */
+#i-rummet {
+  padding: 6rem 3rem;
+  background: var(--warm-white);
+}
+
+.rummet-header {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.rummet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rummet-item {
+  overflow: hidden;
+  border-radius: 2px;
+  aspect-ratio: 4 / 5;
+}
+
+.rummet-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: saturate(0.88);
+}
+
+.rummet-item:hover img {
+  transform: scale(1.03);
+  filter: saturate(1);
+}
+
+@media (max-width: 900px) {
+  #i-rummet {
+    padding: 4rem 1.5rem;
+  }
+  .rummet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .rummet-grid {
+    grid-template-columns: 1fr;
+  }
+}
  
     /* ══════════════════════════════════════
        RESPONSIVE – 900px
