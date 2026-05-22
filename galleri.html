@@ -680,6 +680,14 @@ src="https://www.facebook.com/tr?id=1660378251969151&ev=PageView&noscript=1"
       </div>
     </div>
 
+    <div class="painting-card item-portrait" onclick="openLb('camino',0)">
+        <div class="img-wrap" style="padding-top:100%">
+          <img src="img/Maleri1-60x80-Camino.jpg" alt="Camino – 60x80 cm">
+          <div class="badge-new">Ny</div>
+          <div class="hover-overlay"><span>Se maleri</span></div>
+        </div>
+      </div>
+
   </div>
 </div>
 
@@ -987,6 +995,23 @@ src="https://www.facebook.com/tr?id=1660378251969151&ev=PageView&noscript=1"
       </div>
     </div>
   </div>
+
+<!-- camino -->
+  <div class="series-section" data-series="camino">
+    <div class="series-header">
+      <span class="series-name">Camino</span>
+      <span class="series-count">1 værk</span>
+    </div>
+    <div class="masonry">
+      <div class="painting-card item-portrait" onclick="openLb('camino',0)">
+        <div class="img-wrap" style="padding-top:100%">
+          <img src="img/Maleri1-60x80-Camino.jpg" alt="Camino – 60x80 cm">
+          <div class="hover-overlay"><span>Se maleri</span></div>
+        </div>
+        <div class="info"><div class="info-title">Maleri 1</div><div class="info-meta">60 × 80 cm &nbsp;·&nbsp; Camino</div></div>
+      </div>
+    </div>
+  </div>
  
 </div><!-- /gallery-wrap -->
  
@@ -1115,7 +1140,11 @@ src="https://www.facebook.com/tr?id=1660378251969151&ev=PageView&noscript=1"
       { img:'img/Maleri4-38x47-Provence.JPEG', title:'Maleri 4', size:'38 × 47 cm', series:'Provence', price:'1.600 kr.' },
       
     ],
-  };
+
+    camino: [
+      { img:'img/Maleri1-60x80-Camino.jpg', title:'Maleri 1', size:'60 × 80 cm', series:'Camino', price:'3.100 kr.' },
+  ],
+    };
  
   let currentSeries = null;
   let currentIdx    = 0;
