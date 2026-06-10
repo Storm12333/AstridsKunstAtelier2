@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q36JYDKTQ0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q36JYDKTQ0');
+</script>
+
+  <meta name="google-site-verification" content="feZjjxSXSyQP-OjHvZcuuVOTIzH_2C8YNnYdvk114ck">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunst i Svendborg – Unikke originale malerier | Astrids Kunst Atelier</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/aka-logo.png">
+  <meta name="description" content="Unikke håndmalede akrylmalerier af det danske og europæiske landskab. Køb originale malerier eller bestil dit eget. Hentes i Svendborg eller sendes i hele Danmark.">
+  <meta name="keywords" content="kunst svendborg, lokal kunst svendborg, sydfynsk kunst, naturkunst sydfyn, maler svendborg, kunstner fyn">
+<meta property="og:title" content="Astrids Kunst Atelier – Originale malerier i Svendborg">
+<meta property="og:description" content="Køb originale akrylmalerier fra Svendborg og Sydfyn.">
+<meta property="og:image" content="https://www.astridskunstatelier.dk/img/Selvportræt-Astrid.JPEG">
+<meta property="og:url" content="https://www.astridskunstatelier.dk">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.astridskunstatelier.dk/">
+
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Astrids Kunst Atelier",
+  "url": "https://www.astridskunstatelier.dk",
+  "image": "https://www.astridskunstatelier.dk/img/Selvportræt-Astrid.JPEG",
+  "priceRange": "1600–3100 kr",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Svendborg",
+    "addressRegion": "Fyn",
+    "addressCountry": "DK"
+  },
+  "areaServed": "Svendborg, Sydfyn",
+  "description": "Originale akrylmalerier fra Svendborg og Sydfyn – køb kunst eller bestil dit eget maleri.",
+  "email": "astrid_kv@hotmail.com",
+  "telephone": "+4529921693"
+}
+  </script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1660378251969151');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1660378251969151&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+    /* ── HERO ── */
+#hjem {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Slideshow lag */
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  transform: scale(1.04);
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.06); }
+}
+
+/* Mørkt overlay for læsbarhed */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(20, 18, 14, 0.72) 0%,
+    rgba(20, 18, 14, 0.45) 60%,
+    rgba(20, 18, 14, 0.2) 100%
+  );
+}
+
+/* Tekstindhold */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0 80px;
+  max-width: 700px;
+  margin-top: 80px; /* plads til nav */
+}
+
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--earth);
+  margin-bottom: 1.2rem;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: #f5f0e8;
+  margin-bottom: 1.6rem;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--cream);
+  opacity: 0.85;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: rgba(229, 216, 194, 0.8);
+  font-weight: 300;
+  max-width: 420px;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 13px 32px;
+  border: 1.5px solid var(--cream);
+  color: var(--cream);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background 0.25s, color 0.25s;
+}
+.hero-cta:hover {
+  background: var(--cream);
+  color: var(--dark);
+}
+
+/* Scroll-indikator */
+.hero-scroll {
+  position: absolute;
+  bottom: 2.4rem;
+  right: 3rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(229, 216, 194, 0.55);
+}
+.hero-scroll::after {
+  content: '';
+  width: 1px;
+  height: 48px;
+  background: var(--earth);
+  display: block;
+}
+
+/* Prik-indikatorer */
+.hero-dots {
+  position: absolute;
+  bottom: 2.4rem;
+  left: 80px;
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+}
+.hero-dot {
+  width: 24px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.4s, width 0.4s;
+  cursor: default;
+}
+.hero-dot.active {
+  background: var(--cream);
+  width: 40px;
+}
+
+/* Override gamle style.css regler for #hjem's børn */
+#hjem > div:first-child,
+#hjem > div:nth-child(2) {
+  all: unset;
+}
+
+#hjem > .hero-slides {
+  position: absolute !important;
+  inset: 0 !important;
+  background: none !important;
+  padding: 0 !important;
+  z-index: 0 !important;
+  display: block !important;
+}
+
+#hjem > .hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background: linear-gradient(
+    to right,
+    rgba(20, 18, 14, 0.662) 0%,
+    rgba(20, 18, 14, 0.45) 60%,
+    rgba(20, 18, 14, 0.2) 100%
+  ) !important;
+}
+</style>
+
+</head>
+<body>
+  <script>
+  fbq('track', 'ViewContent');
+</script>
+ 
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hjem" class="nav-logo">A<span>·</span>K<span>·</span>A<span class="nav-logo-aka"><span> - </span>Astrids Kunst Atelier</span></a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="om-kunstneren.html" onclick="closeMenu()">Om</a></li>
+    <li><a href="galleri.html" onclick="closeMenu()">Galleri</a></li>
+    <li><a href="#priser" onclick="closeMenu()">Priser</a></li>
+    <li><a href="#kontakt" onclick="closeMenu()">Kontakt</a></li>
+  </ul>
+</nav>
+ 
+<section id="hjem">
+  <!-- Slideshow baggrundsbilleder -->
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image: url('img/Maleri3-40x40-Provence.JPEG')"></div>
+    <div class="hero-slide" style="background-image: url('img/Maleri1-60x60-Færøerne.JPEG')"></div>
+    <div class="hero-slide" style="background-image: url('img/Maleri4-80x60-Alperne.JPEG')"></div>
+    <div class="hero-slide" style="background-image: url('img/Maleri1-50x40-Sofielund.JPEG')"></div>
+  </div>
+  <!-- Overlay så tekst er læselig -->
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Maler · Svendborg, Fyn</p>
+    <h1 class="hero-title">
+      Lokal kunst i Svendborg<br>
+      <em>— originale malerier<br>fra Sydfyn</em>
+    </h1>
+    <p class="hero-sub">Originale akrylmalerier af det danske og europæiske landskab. Hvert billede er malet i rolig fordybelse og bærer et stykke af det sted, det viser.</p>
+    <a href="galleri.html" class="hero-cta">Se malerierne</a>
+  </div>
+
+  <div class="hero-scroll">Scroll</div>
+
+  <!-- Slideshow indikatorer -->
+  <div class="hero-dots">
+    <span class="hero-dot active"></span>
+    <span class="hero-dot"></span>
+    <span class="hero-dot"></span>
+    <span class="hero-dot"></span>
+  </div>
+</section>
+ 
+<!-- GALLERI -->
+<section id="galleri">
+  <div class="galleri-inner">
+    <div class="galleri-header reveal">
+      <div>
+        <p class="section-label">Udvalgte værker</p>
+        <h2 class="section-title">Galleri</h2>
+      </div>
+      <a href="galleri.html" class="galleri-all-link">
+        Se alle 33 malerier &nbsp;→
+      </a>
+    </div>
+ 
+    <!-- 3 udvalgte preview-malerier -->
+    <div class="galleri-grid galleri-preview">
+      <div class="painting reveal" onclick="window.location='galleri.html'">
+        <img src="img/Maleri3-40x40-Provence.JPEG" alt="Akrylmaleri af naturlandskabet i Provence - lokal kunst fra Svendborg">
+        <div class="painting-overlay">
+          <div class="painting-title">Provence</div>
+          <div class="painting-size">40 × 40 cm</div>
+        </div>
+      </div>
+      <div class="painting reveal" onclick="window.location='galleri.html'">
+        <img src="img/Maleri1-50x40-Sofielund.JPEG" alt="Sofielundskoven malet i blå og grønne toner – akrylmaleri 50x40 cm">
+        <div class="painting-overlay">
+          <div class="painting-title">Sofielund</div>
+          <div class="painting-size">50 × 40 cm</div>
+        </div>
+      </div>
+      <div class="painting reveal" onclick="window.location='galleri.html'">
+        <img src="img/Maleri1-60x60-Færøerne.JPEG" alt="Akrylmaleri af landskabet på Færøerne – Originalt akrylmaleri">
+        <div class="painting-overlay">
+          <div class="painting-title">Færøerne</div>
+          <div class="painting-size">60 × 60 cm</div>
+        </div>
+      </div>
+      <div class="painting reveal painting-cta-card" onclick="window.location='galleri.html'">
+        <div class="painting-cta-inner">
+          <span class="painting-cta-num">33</span>
+          <span class="painting-cta-label">originale<br>malerier</span>
+          <span class="painting-cta-btn">Se hele galleriet →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--moss);color:var(--cream);padding:64px 40px;text-align:center;">
+  <p style="font-size:0.75rem;letter-spacing:0.22em;text-transform:uppercase;opacity:0.65;margin-bottom:1rem;">Interesseret?</p>
+  <h3 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:1rem;line-height:1.2;">
+    Find dit næste maleri —<br><em style="opacity:0.75;">eller bestil et helt unikt</em>
+  </h3>
+  <p style="font-size:1rem;line-height:1.7;opacity:0.8;max-width:480px;margin:0 auto 2rem;">
+    Alle malerier er originale akrylmalerier og kan hentes i Svendborg eller sendes. Ønsker du et motiv med særlig betydning, tager jeg gerne imod bestillinger.
+  </p>
+  <a href="#kontakt" style="display:inline-block;padding:13px 36px;background:var(--cream);color:var(--moss);font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;margin:0 8px 8px;">Kontakt Astrid</a>
+  <a href="#priser" style="display:inline-block;padding:13px 36px;border:1.5px solid rgba(245,240,232,0.6);color:var(--cream);font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;margin:0 8px 8px;">Se priser</a>
+</div>
+
+<!-- MALERIER I RUMMET -->
+<!-- MALERIER I RUMMET -->
+<section id="i-rummet">
+  <div class="rummet-header reveal">
+    <p class="section-label">Malerier i hjemmet</p>
+    <h2 class="section-title">Se malerierne i rummet</h2>
+  </div>
+  <div class="rummet-grid">
+    <div class="rummet-item"><img src="img/IMG_7927.PNG" alt="Mørkt abstrakt maleri 60x80 cm i stue"></div>
+    <div class="rummet-item"><img src="img/IMG_7928.PNG" alt="Bjerglandskab maleri 60x80 cm i varmt rum"></div>
+    <div class="rummet-item"><img src="img/IMG_7929.PNG" alt="Geometrisk maleri 60x80 cm i moderne interiør"></div>
+    <div class="rummet-item"><img src="img/IMG_7930.PNG" alt="Vindue maleri 60x80 cm i terracotta rum"></div>
+    <div class="rummet-item"><img src="img/IMG_7931.PNG" alt="Skov maleri 60x80 cm i minimalistisk rum"></div>
+    <div class="rummet-item"><img src="img/IMG_7932.PNG" alt="Farverigt landskab 80x80 cm i stue"></div>
+  </div>
+</section>
+
+ 
+<!-- PRISER -->
+<section id="priser">
+  <p class="section-label reveal">Hvad koster et maleri?</p>
+  <h2 class="section-title reveal">Priser</h2>
+ 
+  <div class="price-grid reveal">
+    <div class="price-item">
+      <div>
+        <div class="price-name">Lille maleri</div>
+        <div class="price-sub">
+            <span class="price-size">30x30cm-40x40cm</span>
+        </div>
+       
+      </div>
+      <div class="price-val">1.600 kr</div>
+    </div>
+    <div class="price-item">
+      <div>
+        <div class="price-name">Mellem maleri</div>
+        <div class="price-sub">
+           <span class="price-size">50x50cm-60x60cm</span>
+        </div>
+        
+      </div>
+      <div class="price-val">2.100 kr</div>
+    </div>
+    <div class="price-item">
+      <div>
+        <div class="price-name">Stort maleri</div>
+        <div class="price-sub">
+          <span class="price-size">Større end 60x60cm</span>
+        </div>
+      </div>
+      <div class="price-val">3.100 kr</div>
+    </div>
+    <div class="price-item">
+      <div>
+        <div class="price-name">Plakat i ramme</div>
+        <div class="price-sub">Tryk med ramme, klar til ophæng</div>
+      </div>
+      <div class="price-val">250 kr</div>
+    </div>
+  </div>
+  <p class="price-note reveal">Bestillingsopgaver er velkomne — kontakt mig for en snak om dit ønske.</p>
+</section>
+ 
+<!-- KONTAKT -->
+<section id="kontakt">
+  <p class="section-label">Vil du vide mere?</p>
+  <h2 class="section-title">Kontakt Astrid</h2>
+  <div class="divider"></div>
+  <p style="color:rgba(196,168,130,0.7);font-size:1.4rem;max-width:440px;margin:0 auto;">Er du interesseret i et maleri, en bestilling, eller vil du bare slå en sludder af? Skriv eller ring — jeg er altid glad for at høre fra dig.</p>
+  <h4>Atelieret er åbent efter aftale</h4>
+  <div class="kontakt-info">
+    <div class="kontakt-item">
+      <span class="kontakt-item-label">E-mail</span>
+      <span class="kontakt-item-value"><a href="mailto:astrid_kv@hotmail.com">astrid_kv@hotmail.com</a></span>
+    </div>
+    <div class="kontakt-item">
+      <span class="kontakt-item-label">Telefon</span>
+      <span class="kontakt-item-value"><a href="tel:+4529921693">+45 29 92 16 93</a></span>
+    </div>
+    <div class="kontakt-item">
+      <span class="kontakt-item-label">By</span>
+      <span class="kontakt-item-value">Svendborg, Fyn</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Astrids Kunst Atelier — Kunst &amp; Malerier</span>
+  <span>Svendborg · Fyn · Danmark</span>
+</footer>
+<div class="sonderbymarketing">
+<span class="sonderbymarketing-span">Hjemmeside lavet af <a href="https://www.sonderbymarketing.dk">SONDERBY MARKETING</a></span> 
+</div>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <div id="lightbox-content" style="width:60vw;max-width:700px;aspect-ratio:4/3;border-radius:2px;"></div>
+</div>
+
+<script>
+  const images = [
+    "img/Maleri2-40x40-Færøerne.JPEG",
+    "img/Maleri4-80x60-Alperne.JPEG",
+    "img/Maleri5-50x50-Sofielund.JPEG",
+    "img/Maleri3-40x40-Ansigter.JPEG",
+    "img/Maleri4-40x40-Færøerne.JPEG",
+    "img/Maleri1-60x80-Lys.JPEG"
+  ];
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+ 
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+ 
+  // Lightbox
+  function openLightbox(idx) {
+    const lb  = document.getElementById('lightbox');
+    const cnt = document.getElementById('lightbox-content');
+    cnt.innerHTML = `<img src="${images[idx]}" style="width:100%;height:100%;object-fit:contain;">`;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+
+// Hero slideshow
+(function() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots   = document.querySelectorAll('.hero-dot');
+  let current  = 0;
+  let timer;
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+
+  timer = setInterval(next, 3000);
+})();
+
+
+</script>
+
+</body>
+</html>
